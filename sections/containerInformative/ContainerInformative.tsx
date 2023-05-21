@@ -1,6 +1,8 @@
+import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+
 export interface Props {
   informative: Array<{
-    url: string;
+    url: LiveImage;
     alt: string;
     content: string;
   }>;
