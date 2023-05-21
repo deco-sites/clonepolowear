@@ -20,19 +20,20 @@ import * as $$$$$10 from "./islands/OutOfStock.tsx";
 import * as $$$$$$$$0 from "./sections/SearchResult.tsx";
 import * as $$$$$$$$1 from "./sections/ProductDetails.tsx";
 import * as $$$$$$$$2 from "./sections/Highlights.tsx";
-import * as $$$$$$$$3 from "./sections/header/header.tsx";
-import * as $$$$$$$$4 from "./sections/BannerPLP.tsx";
-import * as $$$$$$$$5 from "./sections/WishlistGallery.tsx";
-import * as $$$$$$$$6 from "./sections/Features.tsx";
-import * as $$$$$$$$7 from "./sections/DesignSystem.tsx";
-import * as $$$$$$$$8 from "./sections/BannerGrid.tsx";
-import * as $$$$$$$$9 from "./sections/LinkTree.tsx";
-import * as $$$$$$$$10 from "./sections/Header.tsx";
-import * as $$$$$$$$11 from "./sections/WhatsApp.tsx";
-import * as $$$$$$$$12 from "./sections/Footer.tsx";
-import * as $$$$$$$$13 from "./sections/ProductShelf.tsx";
-import * as $$$$$$$$14 from "./sections/Carousel.tsx";
-import * as $$$$$$$$15 from "./sections/CookieConsent.tsx";
+import * as $$$$$$$$3 from "./sections/containerInformative/ContainerInformative.tsx";
+import * as $$$$$$$$4 from "./sections/header/header.tsx";
+import * as $$$$$$$$5 from "./sections/BannerPLP.tsx";
+import * as $$$$$$$$6 from "./sections/WishlistGallery.tsx";
+import * as $$$$$$$$7 from "./sections/Features.tsx";
+import * as $$$$$$$$8 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$9 from "./sections/BannerGrid.tsx";
+import * as $$$$$$$$10 from "./sections/LinkTree.tsx";
+import * as $$$$$$$$11 from "./sections/Header.tsx";
+import * as $$$$$$$$12 from "./sections/WhatsApp.tsx";
+import * as $$$$$$$$13 from "./sections/Footer.tsx";
+import * as $$$$$$$$14 from "./sections/ProductShelf.tsx";
+import * as $$$$$$$$15 from "./sections/Carousel.tsx";
+import * as $$$$$$$$16 from "./sections/CookieConsent.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -172,22 +173,24 @@ const manifest = {
     "$live/sections/PageInclude.tsx": i2$$$$0,
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
-    "deco-sites/clonepolowear/sections/BannerGrid.tsx": $$$$$$$$8,
-    "deco-sites/clonepolowear/sections/BannerPLP.tsx": $$$$$$$$4,
-    "deco-sites/clonepolowear/sections/Carousel.tsx": $$$$$$$$14,
-    "deco-sites/clonepolowear/sections/CookieConsent.tsx": $$$$$$$$15,
-    "deco-sites/clonepolowear/sections/DesignSystem.tsx": $$$$$$$$7,
-    "deco-sites/clonepolowear/sections/Features.tsx": $$$$$$$$6,
-    "deco-sites/clonepolowear/sections/Footer.tsx": $$$$$$$$12,
-    "deco-sites/clonepolowear/sections/Header.tsx": $$$$$$$$10,
-    "deco-sites/clonepolowear/sections/header/header.tsx": $$$$$$$$3,
+    "deco-sites/clonepolowear/sections/BannerGrid.tsx": $$$$$$$$9,
+    "deco-sites/clonepolowear/sections/BannerPLP.tsx": $$$$$$$$5,
+    "deco-sites/clonepolowear/sections/Carousel.tsx": $$$$$$$$15,
+    "deco-sites/clonepolowear/sections/containerInformative/ContainerInformative.tsx":
+      $$$$$$$$3,
+    "deco-sites/clonepolowear/sections/CookieConsent.tsx": $$$$$$$$16,
+    "deco-sites/clonepolowear/sections/DesignSystem.tsx": $$$$$$$$8,
+    "deco-sites/clonepolowear/sections/Features.tsx": $$$$$$$$7,
+    "deco-sites/clonepolowear/sections/Footer.tsx": $$$$$$$$13,
+    "deco-sites/clonepolowear/sections/Header.tsx": $$$$$$$$11,
+    "deco-sites/clonepolowear/sections/header/header.tsx": $$$$$$$$4,
     "deco-sites/clonepolowear/sections/Highlights.tsx": $$$$$$$$2,
-    "deco-sites/clonepolowear/sections/LinkTree.tsx": $$$$$$$$9,
+    "deco-sites/clonepolowear/sections/LinkTree.tsx": $$$$$$$$10,
     "deco-sites/clonepolowear/sections/ProductDetails.tsx": $$$$$$$$1,
-    "deco-sites/clonepolowear/sections/ProductShelf.tsx": $$$$$$$$13,
+    "deco-sites/clonepolowear/sections/ProductShelf.tsx": $$$$$$$$14,
     "deco-sites/clonepolowear/sections/SearchResult.tsx": $$$$$$$$0,
-    "deco-sites/clonepolowear/sections/WhatsApp.tsx": $$$$$$$$11,
-    "deco-sites/clonepolowear/sections/WishlistGallery.tsx": $$$$$$$$5,
+    "deco-sites/clonepolowear/sections/WhatsApp.tsx": $$$$$$$$12,
+    "deco-sites/clonepolowear/sections/WishlistGallery.tsx": $$$$$$$$6,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
