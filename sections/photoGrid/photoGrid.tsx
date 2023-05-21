@@ -1,9 +1,7 @@
-import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
 export interface Banner {
-  srcMobile: LiveImage;
-  srcDesktop?: LiveImage;
+  src: LiveImage;
   /**
    * @description Image alt text
    */
@@ -13,6 +11,7 @@ export interface Banner {
    */
   href: string;
   title: string;
+  size: "sm" | "md" | "xl";
 }
 
 export type BorderRadius =
@@ -29,12 +28,6 @@ export interface Props {
   /**
    * @description Default is 2 for mobile and all for desktop
    */
-  itemsPerLine: {
-    /** @default 1 */
-    mobile?: 1 | 2;
-    /** @default 1 */
-    desktop?: 1 | 2 | 4 | 6 | 8;
-  };
   /**
    * @description Item's border radius in px
    */
@@ -46,19 +39,6 @@ export interface Props {
   };
   banners: Banner[];
 }
-
-const MOBILE_COLUMNS = {
-  1: "grid-cols-1",
-  2: "grid-cols-2",
-};
-
-const DESKTOP_COLUMNS = {
-  1: "sm:grid-cols-1",
-  2: "sm:grid-cols-2",
-  4: "sm:grid-cols-4",
-  6: "sm:grid-cols-6",
-  8: "sm:grid-cols-8",
-};
 
 const RADIUS_MOBILE = {
   "none": "rounded-none",
@@ -82,59 +62,61 @@ const RADIUS_DESKTOP = {
   "full": "sm:rounded-full",
 };
 
+const COL_GRID = {
+  "sm": "col-span-1",
+  "md": "col-span-2",
+  "xl": "col-span-3",
+};
+
 export default function BannnerGrid({
-  itemsPerLine,
   borderRadius,
   banners = [],
 }: Props) {
   return (
-    <div class="container w-full px-4 md:px-0 mx-auto mt-5 mb-5">
+    <div class="w-4/5 px-4 md:px-0 mx-auto mt-5 mb-5">
       <div
-        class={`grid gap-4 md:gap-6 ${
-          MOBILE_COLUMNS[itemsPerLine.mobile ?? 2]
-        } ${DESKTOP_COLUMNS[itemsPerLine.desktop ?? 4]}`}
+        class={`grid grid-cols-3 md:grid-cols-3 grid-flow-row gap-4 `}
       >
-        {banners.map(({ href, srcMobile, srcDesktop, alt, title }) => (
+        {banners.map(({ href, src, alt, title, size }) => (
           <a
             href={href}
             class={`overflow-hidden ${
               RADIUS_MOBILE[borderRadius.mobile ?? "none"]
             } ${
               RADIUS_DESKTOP[borderRadius.desktop ?? "none"]
-            } relative bg-slate-400`}
+            } relative bg-slate-400 ${COL_GRID[size]}`}
           >
-            <Picture>
-              <Source
-                media="(max-width: 767px)"
-                src={srcMobile}
-                width={100}
-                height={100}
-              />
-              <Source
-                media="(min-width: 768px)"
-                src={srcDesktop ? srcDesktop : srcMobile}
-                width={250}
-                height={250}
-              />
+            <img
+              className="w-full h-full duration-500"
+              src={src}
+              alt={alt}
+              id={title}
+              decoding="async"
+              loading="lazy"
+            />
+            <div
+              className={`peer [&>p]:hover:bg-black absolute w-full bg-transparent top-0 bottom-0 flex items-center justify-center 
+              [&>img]:hover:scale-125 z-10
+               `}
+            >
               <img
-                className=" hover:scale-125 w-full duration-500"
-                class="peer"
-                sizes="(max-width: 640px) 100vw, 30vw"
-                src={srcMobile}
+                className="absolute z-0 w-full h-full duration-500"
+                src={src}
                 alt={alt}
+                id={title}
                 decoding="async"
                 loading="lazy"
               />
-            </Picture>
-            <p
-              className={`${RADIUS_MOBILE[borderRadius.mobile ?? "none"]} ${
-                RADIUS_DESKTOP[borderRadius.desktop ?? "none"]
-              }
-            p-8 absolute md:top-1/3 md:left-1/3 border-2 text-xl bg-slate-500[90] text-slate-100 font-bold
-            top-[20%] left-[20%]`}
-            >
-              {title}
-            </p>
+              <p
+                className={`${RADIUS_MOBILE[borderRadius.mobile ?? "none"]} ${
+                  RADIUS_DESKTOP[borderRadius.desktop ?? "none"]
+                }
+                p-1 border-2 z-10 text-slate-100 font-bold md:p-8 md:text-3xl
+                `}
+              >
+                {title}
+              </p>
+            </div>
           </a>
         ))}
       </div>
