@@ -87,6 +87,7 @@
               "deco-sites/clonepolowear/sections/DesignSystem.tsx",
               "deco-sites/clonepolowear/sections/Features.tsx",
               "deco-sites/clonepolowear/sections/Footer.tsx",
+              "deco-sites/clonepolowear/sections/harder/components/search.tsx",
               "deco-sites/clonepolowear/sections/Header.tsx",
               "deco-sites/clonepolowear/sections/Highlights.tsx",
               "deco-sites/clonepolowear/sections/LinkTree.tsx",
@@ -7502,7 +7503,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4": {
+    "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&b97c216a684399678d2f1f0a61f70e95": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors"
@@ -7518,7 +7519,7 @@
           "required": []
         }
       ],
-      "title": "Colors&b966eeb0bbdb3699ee11b12ce6a39cc4"
+      "title": "Colors&b97c216a684399678d2f1f0a61f70e95"
     },
     "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous": {
       "type": "object",
@@ -7621,7 +7622,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&b97c216a684399678d2f1f0a61f70e95",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8034,6 +8035,36 @@
       },
       "required": [],
       "title": "deco-sites/clonepolowear/components/footer/Footer.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hhcmRlci9jb21wb25lbnRzL3NlYXJjaC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Src"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            }
+          },
+          "required": [],
+          "title": "Logo"
+        }
+      },
+      "required": [
+        "logo"
+      ],
+      "title": "deco-sites/clonepolowear/sections/harder/components/search.tsx@Props"
     },
     "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL2NvbXBvbmVudHMvc2VhcmNoL1NlYXJjaGJhci50c3g=@EditableProps": {
       "type": "object",
@@ -8857,7 +8888,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -8973,7 +9008,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -8991,13 +9026,13 @@
           ]
         }
       ],
-      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -10946,6 +10981,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hhcmRlci9jb21wb25lbnRzL3NlYXJjaC50c3g=": {
+      "title": "deco-sites/clonepolowear/sections/harder/components/search.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hhcmRlci9jb21wb25lbnRzL3NlYXJjaC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/clonepolowear/sections/harder/components/search.tsx"
+          ],
+          "default": "deco-sites/clonepolowear/sections/harder/components/search.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0hlYWRlci50c3g=": {
       "title": "deco-sites/clonepolowear/sections/Header.tsx",
       "type": "object",
@@ -12258,6 +12314,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0Zvb3Rlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hhcmRlci9jb21wb25lbnRzL3NlYXJjaC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0hlYWRlci50c3g="
