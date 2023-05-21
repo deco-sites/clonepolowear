@@ -8455,13 +8455,9 @@
     "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL3Bob3RvR3JpZC9waG90b0dyaWQudHN4@Banner": {
       "type": "object",
       "properties": {
-        "srcMobile": {
+        "src": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Src Mobile"
-        },
-        "srcDesktop": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Src Desktop"
+          "title": "Src"
         },
         "alt": {
           "type": "string",
@@ -8476,13 +8472,32 @@
         "title": {
           "type": "string",
           "title": "Title"
+        },
+        "size": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "sm"
+            },
+            {
+              "type": "string",
+              "const": "md"
+            },
+            {
+              "type": "string",
+              "const": "xl"
+            }
+          ],
+          "type": "string",
+          "title": "Size"
         }
       },
       "required": [
-        "srcMobile",
+        "src",
         "alt",
         "href",
-        "title"
+        "title",
+        "size"
       ],
       "title": "Banner"
     },
@@ -8496,54 +8511,6 @@
     "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL3Bob3RvR3JpZC9waG90b0dyaWQudHN4@Props": {
       "type": "object",
       "properties": {
-        "itemsPerLine": {
-          "type": "object",
-          "properties": {
-            "mobile": {
-              "anyOf": [
-                {
-                  "type": "number",
-                  "const": 1
-                },
-                {
-                  "type": "number",
-                  "const": 2
-                }
-              ],
-              "type": "number",
-              "title": "Mobile"
-            },
-            "desktop": {
-              "anyOf": [
-                {
-                  "type": "number",
-                  "const": 1
-                },
-                {
-                  "type": "number",
-                  "const": 2
-                },
-                {
-                  "type": "number",
-                  "const": 4
-                },
-                {
-                  "type": "number",
-                  "const": 6
-                },
-                {
-                  "type": "number",
-                  "const": 8
-                }
-              ],
-              "type": "number",
-              "title": "Desktop"
-            }
-          },
-          "required": [],
-          "title": "Items Per Line",
-          "description": "Default is 2 for mobile and all for desktop"
-        },
         "borderRadius": {
           "type": "object",
           "properties": {
@@ -8634,7 +8601,6 @@
         }
       },
       "required": [
-        "itemsPerLine",
         "borderRadius",
         "banners"
       ],
