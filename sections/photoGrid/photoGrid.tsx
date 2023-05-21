@@ -88,7 +88,7 @@ export default function BannnerGrid({
   banners = [],
 }: Props) {
   return (
-    <section class="container w-full px-4 md:px-0 mx-auto mt-5">
+    <div class="container w-full px-4 md:px-0 mx-auto mt-5 mb-5">
       <div
         class={`grid gap-4 md:gap-6 ${
           MOBILE_COLUMNS[itemsPerLine.mobile ?? 2]
@@ -99,7 +99,9 @@ export default function BannnerGrid({
             href={href}
             class={`overflow-hidden ${
               RADIUS_MOBILE[borderRadius.mobile ?? "none"]
-            } ${RADIUS_DESKTOP[borderRadius.desktop ?? "none"]} relative bg-slate-400`}
+            } ${
+              RADIUS_DESKTOP[borderRadius.desktop ?? "none"]
+            } relative bg-slate-400`}
           >
             <Picture>
               <Source
@@ -124,13 +126,18 @@ export default function BannnerGrid({
                 loading="lazy"
               />
             </Picture>
-            <p className={`${
-              RADIUS_MOBILE[borderRadius.mobile ?? "none"]
-            } ${RADIUS_DESKTOP[borderRadius.desktop ?? "none"]}
-            p-8 absolute top-1/3 left-1/3 border-2 text-xl bg-slate-500[90] text-slate-100 font-bold`}>{title}</p>
+            <p
+              className={`${RADIUS_MOBILE[borderRadius.mobile ?? "none"]} ${
+                RADIUS_DESKTOP[borderRadius.desktop ?? "none"]
+              }
+            p-8 absolute md:top-1/3 md:left-1/3 border-2 text-xl bg-slate-500[90] text-slate-100 font-bold
+            top-[20%] left-[20%]`}
+            >
+              {title}
+            </p>
           </a>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

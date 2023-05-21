@@ -26,7 +26,8 @@ function Header(
   }: Props,
 ) {
   return (
-    <div className="h-28">
+    <>
+      <div className="md:block h-28">
       <div className="fixed w-full z-20">
         <div className="bg-black flex justify-around pt-5 ">
           <img
@@ -37,7 +38,7 @@ function Header(
           <input
             type="text"
             placeholder={placeholder}
-            className="input input-bordered w-3/5"
+            className=" hidden md:flex input input-bordered w-3/5"
           />
           <div className="flex w-16 justify-around">
             <svg
@@ -86,6 +87,7 @@ function Header(
         </nav>
       </div>
     </div>
+    </>
   );
 }
 
