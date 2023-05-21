@@ -87,8 +87,8 @@
               "deco-sites/clonepolowear/sections/DesignSystem.tsx",
               "deco-sites/clonepolowear/sections/Features.tsx",
               "deco-sites/clonepolowear/sections/Footer.tsx",
-              "deco-sites/clonepolowear/sections/harder/components/search.tsx",
               "deco-sites/clonepolowear/sections/Header.tsx",
+              "deco-sites/clonepolowear/sections/header/header.tsx",
               "deco-sites/clonepolowear/sections/Highlights.tsx",
               "deco-sites/clonepolowear/sections/LinkTree.tsx",
               "deco-sites/clonepolowear/sections/ProductDetails.tsx",
@@ -8036,36 +8036,6 @@
       "required": [],
       "title": "deco-sites/clonepolowear/components/footer/Footer.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hhcmRlci9jb21wb25lbnRzL3NlYXJjaC50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "logo": {
-          "type": "object",
-          "properties": {
-            "src": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Src"
-            },
-            "alt": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Alt"
-            }
-          },
-          "required": [],
-          "title": "Logo"
-        }
-      },
-      "required": [
-        "logo"
-      ],
-      "title": "deco-sites/clonepolowear/sections/harder/components/search.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL2NvbXBvbmVudHMvc2VhcmNoL1NlYXJjaGJhci50c3g=@EditableProps": {
       "type": "object",
       "properties": {
@@ -8225,6 +8195,72 @@
         "alerts"
       ],
       "title": "deco-sites/clonepolowear/components/header/Header.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hlYWRlci9oZWFkZXIudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Url"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            },
+            "size": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "title": "Size"
+            }
+          },
+          "required": [],
+          "title": "Logo"
+        },
+        "placeholder": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Placeholder"
+        },
+        "itens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item": {
+                "type": "string",
+                "title": "Item"
+              },
+              "href": {
+                "type": "string",
+                "title": "Href"
+              }
+            },
+            "required": [
+              "item",
+              "href"
+            ]
+          },
+          "title": "Itens"
+        }
+      },
+      "required": [
+        "logo",
+        "itens"
+      ],
+      "title": "deco-sites/clonepolowear/sections/header/header.tsx@Props"
     },
     "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL2NvbXBvbmVudHMvdWkvSGlnaGxpZ2h0cy50c3g=@Highlight": {
       "type": "object",
@@ -10981,27 +11017,6 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hhcmRlci9jb21wb25lbnRzL3NlYXJjaC50c3g=": {
-      "title": "deco-sites/clonepolowear/sections/harder/components/search.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hhcmRlci9jb21wb25lbnRzL3NlYXJjaC50c3g=@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/clonepolowear/sections/harder/components/search.tsx"
-          ],
-          "default": "deco-sites/clonepolowear/sections/harder/components/search.tsx"
-        }
-      }
-    },
     "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0hlYWRlci50c3g=": {
       "title": "deco-sites/clonepolowear/sections/Header.tsx",
       "type": "object",
@@ -11020,6 +11035,27 @@
             "deco-sites/clonepolowear/sections/Header.tsx"
           ],
           "default": "deco-sites/clonepolowear/sections/Header.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hlYWRlci9oZWFkZXIudHN4": {
+      "title": "deco-sites/clonepolowear/sections/header/header.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hlYWRlci9oZWFkZXIudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/clonepolowear/sections/header/header.tsx"
+          ],
+          "default": "deco-sites/clonepolowear/sections/header/header.tsx"
         }
       }
     },
@@ -12316,10 +12352,10 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0Zvb3Rlci50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hhcmRlci9jb21wb25lbnRzL3NlYXJjaC50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0hlYWRlci50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0hlYWRlci50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL2hlYWRlci9oZWFkZXIudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZXBvbG93ZWFyL3NlY3Rpb25zL0hpZ2hsaWdodHMudHN4"
